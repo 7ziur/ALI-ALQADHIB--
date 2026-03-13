@@ -6,7 +6,83 @@
 <title>علي حسين القضيب | Ali Hussain AlQadhib</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-:root {
+  .ecora-stats-row{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:16px;
+margin:40px 0;
+}
+
+.ecora-stat-card{
+background:var(--bg-card);
+border:1px solid var(--border-gold);
+padding:20px;
+text-align:center;
+border-radius:6px;
+}
+
+.ecora-stat-num{
+font-size:2rem;
+color:var(--gold);
+font-weight:700;
+}
+
+.ecora-stat-label{
+font-size:0.8rem;
+color:var(--text-muted);
+}
+
+.ecora-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+margin-top:40px;
+}
+
+.ecora-card{
+background:var(--bg-card);
+border:1px solid var(--border-gold);
+padding:28px;
+border-radius:8px;
+}
+
+.ecora-card-icon{
+font-size:1.8rem;
+margin-bottom:10px;
+}
+
+.ecora-card-title{
+font-weight:700;
+margin-bottom:6px;
+}
+
+.ecora-card-body{
+font-size:0.9rem;
+color:var(--text-muted);
+line-height:1.7;
+}
+
+.ecora-center{
+text-align:center;
+}
+
+.ecora-website-btn{
+display:inline-block;
+padding:12px 26px;
+border:1px solid var(--gold);
+border-radius:30px;
+color:var(--gold);
+text-decoration:none;
+transition:.3s;
+}
+
+.ecora-website-btn:hover{
+background:var(--gold);
+color:#000;
+}
+  
+:root
+  {
   --gold: #C9A84C;
   --gold-light: #E8C97A;
   --gold-dark: #8B6914;
@@ -1908,67 +1984,160 @@ body.lang-ar .en-only { display: none !important; }
 
 </section>
 
+  <div class="divider"></div>
 
-/* ECORA SECTION */
+<!-- ===== ECORA INITIATIVE ===== -->
+<section class="ecora-section" id="ecora">
+  <!-- Green floating particles -->
+  <div class="ecora-particles" id="ecoraParticles"></div>
+  
+  <div class="ecora-header reveal">
+    <span class="ecora-tag">
+      <span data-en>Environmental Initiative</span>
+      <span data-ar>مبادرة بيئية</span>
+    </span>
+    <div class="ecora-logo-big">♻️</div>
+    <h2 class="ecora-title">
+      <span data-en>ECORA Initiative</span>
+    </h2>
+    <span class="ecora-title-ar" data-ar>مبادرة إيكورا</span>
+    <div class="ecora-divider"></div>
+    <p class="ecora-tagline">
+      <span data-en class="ecora-tagline">An environmental initiative to collect PET plastic bottles, transforming them from environmental pollutants into a valuable resource — an extension of the founder's scientific research that won the Seoul International Invention Fair Gold Medal.</span>
+      <span data-ar class="ecora-tagline-ar">مبادرة بيئية تُعنى بجمع عبوات المياه البلاستيكية من نوع PET، لتحويلها من ملوث بيئي إلى مورد ذي قيمة — امتداد للبحث العلمي الحائز على الميدالية الذهبية في معرض سيول الدولي للاختراعات.</span>
+    </p>
+  </div>
 
-.ecora-section{
-background:linear-gradient(180deg,#0f1f16,#0a1410);
-border-top:1px solid #1b3a2a;
-border-bottom:1px solid #1b3a2a;
-}
+  <!-- Stats -->
+  <div class="ecora-stats-row reveal">
+    <div class="ecora-stat-card">
+      <div class="ecora-stat-num">91</div>
+      <div class="ecora-stat-label">
+        <span data-en>Volunteer Hours</span>
+        <span data-ar>ساعة تطوعية بيئية</span>
+      </div>
+    </div>
+    <div class="ecora-stat-card">
+      <div class="ecora-stat-num">+14</div>
+      <div class="ecora-stat-label">
+        <span data-en>Volunteers</span>
+        <span data-ar>متطوع</span>
+      </div>
+    </div>
+    <div class="ecora-stat-card">
+      <div class="ecora-stat-num">+7</div>
+      <div class="ecora-stat-label">
+        <span data-en>Locations</span>
+        <span data-ar>موقع تطوعي</span>
+      </div>
+    </div>
+    <div class="ecora-stat-card">
+      <div class="ecora-stat-num">3</div>
+      <div class="ecora-stat-label">
+        <span data-en>Cities</span>
+        <span data-ar>مدن: الهفوف، المبرز، بقيق</span>
+      </div>
+    </div>
+    <div class="ecora-stat-card">
+      <div class="ecora-stat-num">8</div>
+      <div class="ecora-stat-label">
+        <span data-en>Website Languages</span>
+        <span data-ar>لغات على الموقع الإلكتروني</span>
+      </div>
+    </div>
+    <div class="ecora-stat-card">
+      <div class="ecora-stat-num">85%</div>
+      <div class="ecora-stat-label">
+        <span data-en>World Population Reached</span>
+        <span data-ar>من سكان العالم يصلهم الموقع</span>
+      </div>
+    </div>
+  </div>
 
-.ecora-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:24px;
-margin-top:40px;
-}
+  <!-- Cards Grid -->
+  <div class="ecora-grid reveal">
+    <div class="ecora-card">
+      <div class="ecora-card-icon">🔬</div>
+      <div class="ecora-card-title-ar" data-ar>من البحث إلى الواقع</div>
+      <div class="ecora-card-title" data-en>From Research to Reality</div>
+      <p class="ecora-card-body">
+        <span data-en>ECORA is the real-world extension of Ali's award-winning research: collecting PET bottles for recycling using his innovative photocatalytic technology that reduces carbon emissions by 85%.</span>
+        <span data-ar>إيكورا هي الامتداد الميداني لبحث علي الحائز على الجائزة الدولية: جمع عبوات PET لإعادة تدويرها بتقنيته المبتكرة التي تقلل انبعاثات الكربون بنسبة 85%.</span>
+      </p>
+    </div>
+    <div class="ecora-card">
+      <div class="ecora-card-icon">🌱</div>
+      <div class="ecora-card-title-ar" data-ar>رؤية مبادرة إيكورا</div>
+      <div class="ecora-card-title" data-en>ECORA's Vision</div>
+      <p class="ecora-card-body">
+        <span data-en>Transform PET bottles into a sustainable resource, build a conscious community that practices daily recycling, and support the circular economy to protect natural ecosystems.</span>
+        <span data-ar>تحويل عبوات PET إلى مورد مستدام، وبناء مجتمع واعٍ يمارس إعادة التدوير كأسلوب حياة يومي، ودعم التحول نحو اقتصاد دائري يحمي الأنظمة الطبيعية.</span>
+      </p>
+    </div>
+    <div class="ecora-card">
+      <div class="ecora-card-icon">🤝</div>
+      <div class="ecora-card-title-ar" data-ar>الشراكات والتعاون</div>
+      <div class="ecora-card-title" data-en>Partnerships</div>
+      <p class="ecora-card-body">
+        <span data-en>Partnered with Eayni Recycling Association Cooperative, 3 private schools across Al-Ahsa, public parks, and the community — with appreciation certificates from all partner institutions.</span>
+        <span data-ar>شراكة مع جمعية عيني لإعادة التدوير التعاونية، و3 مدارس أهلية في الأحساء، وحدائق عامة، والمجتمع — مع شهادات تقدير من جميع الجهات الشريكة.</span>
+      </p>
+    </div>
+    <div class="ecora-card">
+      <div class="ecora-card-icon">📊</div>
+      <div class="ecora-card-title-ar" data-ar>نتائج الاستبيان</div>
+      <div class="ecora-card-title" data-en>Survey Results</div>
+      <p class="ecora-card-body">
+        <span data-en>71% rated the initiative's impact on school cleanliness with 5 stars · 63% rated increased environmental awareness with 5 stars · 66% rated the importance of continuing the initiative with 5 stars.</span>
+        <span data-ar>71% يقيّمون أثر المبادرة على نظافة المدرسة بـ5 نجوم · 63% يقيّمون زيادة الوعي البيئي بـ5 نجوم · 66% يقيّمون أهمية الاستمرار بـ5 نجوم.</span>
+      </p>
+    </div>
+    <div class="ecora-card">
+      <div class="ecora-card-icon">🎯</div>
+      <div class="ecora-card-title-ar" data-ar>الأهداف المشتركة مع رؤية 2030</div>
+      <div class="ecora-card-title" data-en>Aligned with Vision 2030</div>
+      <p class="ecora-card-body">
+        <span data-en>Raising environmental awareness · Encouraging volunteering · Protecting natural areas · Environmental protection from pollution — aligned with Saudi Vision 2030 and UN Sustainable Development Goals.</span>
+        <span data-ar>رفع الوعي البيئي · تشجيع العمل التطوعي · حماية المناطق الطبيعية · الحد من التلوث — متوافقة مع رؤية المملكة 2030 وأهداف التنمية المستدامة الأممية.</span>
+      </p>
+    </div>
+    <div class="ecora-card">
+      <div class="ecora-card-icon">🚀</div>
+      <div class="ecora-card-title-ar" data-ar>خطة الاستدامة حتى 2029</div>
+      <div class="ecora-card-title" data-en>Sustainability Plan to 2029</div>
+      <p class="ecora-card-body">
+        <span data-en>5 phases: permanent containers (2026) → expand to new cities (2027) → quantitative tracking (2027-28) → link with scientific recycling tech (2028) → full financial sustainability (2029). Target: 20+ cities, 150+ volunteers.</span>
+        <span data-ar>5 مراحل: تثبيت الحاويات (2026) ← توسيع لمدن جديدة (2027) ← بناء نظام تتبع كمي (2027-28) ← ربط تقنية البحث العلمي (2028) ← استدامة مالية كاملة (2029). هدف: 20+ مدينة، 150+ متطوع.</span>
+      </p>
+    </div>
+  </div>
 
-.ecora-card{
-background:#121212;
-padding:24px;
-border-radius:8px;
-border:1px solid #1e4030;
-}
+  </section>
 
-.ecora-card h3{
-color:#7cffb2;
-margin-bottom:8px;
-}
+  <!-- SDGs -->
+  <div class="ecora-center reveal" style="margin-bottom: 40px;">
+    <p style="color:#81C784; font-family:'Amiri',serif; font-size:1rem; margin-bottom:16px;">
+      <span data-en>Aligned with UN Sustainable Development Goals</span>
+      <span data-ar>متوافقة مع أهداف التنمية المستدامة الأممية</span>
+    </p>
+    <div class="ecora-sdgs">
+      <div class="ecora-sdg-badge">🌊 14 · Life Below Water</div>
+      <div class="ecora-sdg-badge">🌳 15 · Life on Land</div>
+      <div class="ecora-sdg-badge">🌡️ 13 · Climate Action</div>
+      <div class="ecora-sdg-badge">♻️ 12 · Responsible Consumption</div>
+      <div class="ecora-sdg-badge">🏭 9 · Industry & Innovation</div>
+      <div class="ecora-sdg-badge">💼 8 · Decent Work</div>
+    </div>
+  </div>
 
-.ecora-stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:20px;
-margin-top:40px;
-}
-
-.ecora-stat{
-background:#121212;
-padding:20px;
-text-align:center;
-border-radius:8px;
-border:1px solid #1e4030;
-}
-
-.ecora-stat h3{
-color:#7cffb2;
-font-size:28px;
-}
-
-.ecora-center{
-text-align:center;
-margin-top:30px;
-}
-
-.ecora-btn{
-padding:12px 28px;
-border-radius:30px;
-background:#7cffb2;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-}
+  <!-- Website button -->
+  <div class="ecora-center reveal">
+    <a href="https://ecora-initiative.odoo.com" target="_blank" class="ecora-website-btn">
+      🌐 <span data-en>Visit ECORA Website</span>
+      <span data-ar>زيارة موقع مبادرة إيكورا</span>
+    </a>
+  </div>
+</section>
 
   <!-- SDGs -->
   <div class="ecora-center reveal" style="margin-bottom: 40px;">
@@ -2022,10 +2191,10 @@ font-weight:bold;
         <div class="rec-avatar">👩‍💼</div>
         <div>
           <div class="rec-name-en">Ms. Eman Aljoughaiman</div>
-          <div class="rec-name-ar">أ. إيمان الجوغيمان</div>
+          <div class="rec-name-ar">أ. إيمان الجغيمان</div>
           <div class="rec-role">
             <span data-en>Supervisor, Gifted Students Dept. · Al-Ahsa Education Administration · Accompanying Supervisor at SIIF'25, South Korea</span>
-            <span data-ar>مشرفة قسم الطلاب الموهوبين · إدارة تعليم الأحساء · المشرفة المرافقة في معرض سيول 2025</span>
+            <span data-ar>مشرفة قسم الطلاب الموهوبين · إدارة تعليم الأحساء · المشرفة المرافقة في معرض سيؤول الدولي للاختراعات 2025</span>
           </div>
         </div>
       </div>
@@ -2044,7 +2213,7 @@ font-weight:bold;
           <div class="rec-name-ar">د. عماد الزهراني</div>
           <div class="rec-role">
             <span data-en>Doctorate in Education Foundations · Educational Supervisor · Founding Member, Saudi Philosophy Association · IReadaward Competition Leader 2024</span>
-            <span data-ar>دكتوراه في أصول التربية · مشرف تربوي · عضو مؤسس الجمعية الفلسفية السعودية · قائد مسابقة إقرأ للعالم العربي 2024</span>
+            <span data-ar>دكتوراه في أصول التربية · مشرف تربوي · عضو مؤسس الجمعية الفلسفية السعودية · رائد في مسابقة أقراأ للعالم العربي 2024</span>
           </div>
         </div>
       </div>
